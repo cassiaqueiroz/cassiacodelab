@@ -142,7 +142,7 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 27px;
+  font-size: 32px;
   margin: 0;
   font-weight: 400;
   color: var(--heading-color);
@@ -542,7 +542,7 @@ section,
 
 .hero p {
   margin: 10px 0 0 0;
-  font-size: 22px;
+  font-size: 25px;
   color: var(--heading-color);
 }
 
@@ -565,11 +565,11 @@ section,
 
 /* Estilo dos links sociais */
 #hero .social-links {
-  margin-top: 3%;
+  margin-top: 10%;
 }
 
 #hero .social-links a {
-  font-size: 20px;
+  font-size: 25px;
   display: inline-block;
   color: #a999e2;
   line-height: 1;
