@@ -565,11 +565,11 @@ section,
 
 /* Estilo dos links sociais */
 #hero .social-links {
-  margin-top: 10%;
+  margin-top: 8%;
 }
 
 #hero .social-links a {
-  font-size: 25px;
+  font-size: 23px;
   display: inline-block;
   color: #a999e2;
   line-height: 1;
