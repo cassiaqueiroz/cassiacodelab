@@ -148,6 +148,10 @@ h6 {
   color: var(--heading-color);
 }
 
+.sitename {
+  font-size: 36px;
+}
+
 .scrolled .header {
   box-shadow: 0px 0 16px rgba(251,219,250, 0.1), 0px 0 20px rgba(0, 0, 0, 0.4);
 }
