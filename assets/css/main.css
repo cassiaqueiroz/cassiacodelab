@@ -3,12 +3,14 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+@import url('https://fonts.cdnfonts.com/css/samudera');
+@import url('https://fonts.cdnfonts.com/css/pt-mono');
+
+
 :root {
-  --default-font: "IBM Plex Mono", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Inconsolata", sans-serif;
-  --nav-font: "Red Hat Display", sans-serif;
+  --default-font: "PT Mono", sans-serif;
+  --heading-font: "Samudera",  sans-serif;
+  --nav-font: 'Samudera', sans-serif;
 
   /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 
@@ -82,6 +84,10 @@ body {
   background-attachment: fixed;
 }
 
+p {
+  font-size: 16px;
+}
+
 .background::before {
   content: "";
   position: absolute;
@@ -152,6 +158,7 @@ h6 {
 
 .sitename {
   font-size: 35px;
+  font-family: var(--heading-font);
 }
 
 .scrolled .header {
@@ -183,7 +190,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 17px;
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
@@ -252,7 +259,7 @@ h6 {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -520,7 +527,7 @@ section,
 
 .section-title h2 {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 
@@ -654,7 +661,7 @@ section,
 # About 2 Section
 --------------------------------------------------------------*/
 .about-2 .profile-img {
-  border: 13px solid var(--accent-color);
+  border: 12px solid var(--accent-color);
   padding: 0;
   width: 300px;
   height: auto;
@@ -814,7 +821,7 @@ section,
 .contact .info-item h3 {
   padding: 0;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 5px;
 }
 
