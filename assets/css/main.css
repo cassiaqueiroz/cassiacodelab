@@ -29,9 +29,9 @@
   --nav-color: #ffffff; /* The default color of the main navmenu links */
   --nav-hover-color: #ac8de4; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: rgba(
-    12,
-    4,
-    20,
+    1,
+    1,
+    9,
     0.7
   ); /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -323,7 +323,7 @@ h6 {
     font-size: 32px;
     top: 15px;
     right: 15px;
-    margin-right: 0;
+    margin-right: 8px;
     z-index: 9999;
   }
 
@@ -740,6 +740,15 @@ section,
   transition: all ease-in-out 0.3s;
   padding: 15px;
 }
+
+.portfolio p {
+  text-align: left;
+}
+
+#portfolio .small {
+  text-align: left;
+}
+
 
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
