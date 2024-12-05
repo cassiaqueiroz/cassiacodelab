@@ -242,7 +242,11 @@ h6 {
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: color-mix(in srgb, var(--nav-mobile-background-color), transparent 40%);
+    background-color: color-mix(
+      in srgb,
+      var(--nav-mobile-background-color),
+      transparent 40%
+    );
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -253,7 +257,7 @@ h6 {
   .navmenu ul::before {
     content: "";
     position: fixed;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     left: 0;
     width: 100vw;
@@ -448,7 +452,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 40%);
   color: var(--contrast-color);
 }
 
@@ -599,7 +603,7 @@ section,
 #hero .social-links a {
   font-size: 23px;
   display: inline-block;
-  color: #a999e2;
+  color: color-mix(in srgb, var(--accent-color), transparent 20%);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -730,7 +734,7 @@ section,
 }
 
 .portfolio .portfolio-item .portfolio-info {
-  background-color: rgba(251, 219, 250, 0.58);
+  background: linear-gradient(15deg, rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.95));
   opacity: 0;
   position: absolute;
   left: 30px;
@@ -749,16 +753,15 @@ section,
   text-align: left;
 }
 
-
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   padding-right: 50px;
-  color: #000;
+  color: #fff;
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  color: #000;
+  color: #fff;
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
@@ -770,14 +773,14 @@ section,
   right: 50px;
   font-size: 24px;
   top: calc(50% - 14px);
-  color: #000;
+  color: #fff;
   transition: 0.3s;
   line-height: 0;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: var(--default-color);
+  color: var(--accent-color);
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
