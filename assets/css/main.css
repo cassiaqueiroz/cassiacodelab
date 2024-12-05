@@ -14,9 +14,9 @@
   /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 
   --background-color: rgba(
-    255,
-    255,
-    255,
+    0,
+    0,
+    0,
     1
   ); /* Background color for the entire website, including individual sections */
   --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
