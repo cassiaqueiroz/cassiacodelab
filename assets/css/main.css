@@ -734,7 +734,7 @@ section,
 }
 
 .portfolio .portfolio-item .portfolio-info {
-  background: radial-gradient(circle, rgba(169, 153, 226, 0.3), rgba(169, 153, 226, 1));
+  background: radial-gradient(circle, rgba(169, 153, 226, 0.9), rgba(251,219,250, 0.8));
   opacity: 0;
   position: absolute;
   left: 30px;
@@ -752,7 +752,7 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.35));
   z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo principal */
   opacity: 0; /* Inicialmente invisível */
   transition: opacity 0.3s ease-in-out;
