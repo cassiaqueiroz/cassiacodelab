@@ -165,6 +165,7 @@ h6 {
 
 .sitename {
   font-size: 2rem;
+  margin-bottom: 0.5rem;
   letter-spacing: 1px;
   font-family: var(--heading-font);
 }
