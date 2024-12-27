@@ -257,7 +257,7 @@ h6 {
     transition: 0.3s;
     z-index: 9998;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-    outline: 3px solid rgba(251, 219, 250, 0.4);
+    outline: 2px solid rgba(251, 219, 250, 0.45);
   }
 
   .navmenu ul::before {
@@ -725,7 +725,7 @@ section,
 # About 2 Section
 --------------------------------------------------------------*/
 .about-2 .profile-img {
-  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 20%);
+  border: 3px solid color-mix(in srgb, var(--accent-color), transparent 20%);
   padding: 0;
   width: 10rem;
   height: auto;
