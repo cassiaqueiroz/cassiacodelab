@@ -257,7 +257,7 @@ h6 {
     transition: 0.3s;
     z-index: 9998;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-    outline: 2px solid rgba(251, 219, 250, 0.4);
+    outline: 3px solid rgba(251, 219, 250, 0.4);
   }
 
   .navmenu ul::before {
