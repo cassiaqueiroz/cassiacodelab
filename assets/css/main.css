@@ -165,6 +165,7 @@ h6 {
 
 .sitename {
   font-size: 2rem;
+  letter-spacing: 1px;
   font-family: var(--heading-font);
 }
 
@@ -199,6 +200,7 @@ h6 {
     padding: 18px 15px;
     font-size: 15px;
     font-family: var(--nav-font);
+    letter-spacing: 1px;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -399,21 +401,17 @@ h6 {
 }
 
 .footer .social-links {
-  margin-top: 20px;
+  margin-top: 0.9rem;
 }
 
 .footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.1rem;
-  height: 2.1rem;
-  border-radius: 50%;
   box-sizing: border-box;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 1rem;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin: 0 5px;
+  margin: 0 10px;
   transition: 0.3s;
 }
 
@@ -587,6 +585,7 @@ section,
   text-align: center;
   padding-bottom: 60px;
   position: relative;
+  letter-spacing: 1px;
 }
 
 .section-title h2 {
@@ -643,11 +642,11 @@ section,
 
 /* Estilo dos links sociais */
 #hero .social-links {
-  margin-top: 8%;
+  margin-top: 1.3rem;
 }
 
 #hero .social-links a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: inline-block;
   color: color-mix(in srgb, var(--accent-color), transparent 20%);
   line-height: 1;
@@ -820,6 +819,7 @@ section,
 
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
+  letter-spacing: 1px;
   font-weight: 500;
   padding-right: 50px;
   color: #fdfdfd;
@@ -913,6 +913,7 @@ section,
 
 .contact .info-item h3 {
   padding: 0;
+  letter-spacing: 1px;
   font-size: 1.12rem;
   font-weight: 500;
   margin-bottom: 5px;
