@@ -727,7 +727,7 @@ section,
 .about-2 .profile-img {
   border: 3px solid color-mix(in srgb, var(--accent-color), transparent 20%);
   padding: 0;
-  width: 10rem;
+  width: 12rem;
   height: auto;
   border-radius: 50%;
 }
