@@ -788,27 +788,6 @@ section,
   padding: 15px;
 }
 
-/* .portfolio .portfolio-item .portfolio-info::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  background-position: right 50%;
-  z-index: -1;
-  /* Coloca o pseudo-elemento atrás do conteúdo principal */
-  opacity: 0;
-  /* Inicialmente invisível */
-  transition: opacity 0.3s ease-in-out;
-} */
-
-.portfolio .portfolio-item:hover .portfolio-info::before {
-  opacity: 1;
-  /* Torna o fundo visível no hover */
-}
-
 .portfolio p {
   text-align: left;
 }
