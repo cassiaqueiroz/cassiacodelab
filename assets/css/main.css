@@ -22,7 +22,7 @@
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #fdfdfd;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #a184da;
+  --accent-color: #fefefe;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #fdfdfd;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -73,7 +73,7 @@
 body {
   color: var(--default-color);
   font-family: var(--default-font);
-  background: url(../img/hero-bg.jpeg), rgba(0, 0, 0, 0.5);
+  background: url(../img/freepik-6.jpeg), rgba(0, 0, 0, 0.06);
   background-size: cover;
   background-blend-mode: darken;
   position: relative;
@@ -88,7 +88,6 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(139, 83, 254, 0.65);
   z-index: -1;
 }
 
@@ -234,7 +233,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: #512A86;
   }
 }
 
@@ -262,23 +261,36 @@ h6 {
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: rgba(81, 42, 134, 0.85);
+    background: rgba(10, 11, 54, 0.3);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-    outline: 1px solid rgba(255, 255, 255, 0.6);
+    outline: 1px solid rgba(255, 255, 255, 0.9);
+    background-size: cover;
+    /* A imagem de fundo cobre toda a área */
+    background-position: center;
+    /* A imagem de fundo é centralizada */
+    background-repeat: no-repeat;
+    /* Não repete a imagem */
   }
 
   .navmenu ul::before {
+    background: url(../img/luxa.org-opacity-changed-image\ \(1\)\ \(1\).png);
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* A imagem de fundo cobre toda a área */
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    /* Rotaciona a imagem */
     z-index: -1;
-    /* Fica atrás do menu */
+    /* Coloca o fundo atrás do conteúdo */
   }
 
   .navmenu li {
@@ -406,6 +418,7 @@ h6 {
   border-color: var(--accent-color);
 }
 
+
 .footer .credits {
   margin-top: 10px;
   font-size: 12px;
@@ -471,7 +484,7 @@ h6 {
 .scroll-top i {
   font-size: 26px;
   font-weight: 700;
-  color: #fff;
+  color: #512A86;
   line-height: 0;
 }
 
@@ -819,7 +832,7 @@ section,
   right: 50px;
   font-size: 24px;
   top: calc(50% - 14px);
-  color: #fdfdfdea ;
+  color: #fdfdfdea;
   transition: 0.3s;
   line-height: 0;
 }
@@ -881,7 +894,7 @@ section,
 
 .contact .info-item i {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: #fff;
+  color: #512A86;
   font-size: 20px;
   width: 44px;
   height: 44px;
