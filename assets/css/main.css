@@ -758,7 +758,7 @@ section,
 }
 
 .portfolio .portfolio-item .portfolio-info {
-  background: radial-gradient(circle, rgba(169, 153, 226, 0.8), rgba(251, 219, 250, 1));
+  background-color: rgba(81, 42, 134, 0.85);
   opacity: 0;
   position: absolute;
   left: 30px;
@@ -776,7 +776,7 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3));
   z-index: -1;
   /* Coloca o pseudo-elemento atrás do conteúdo principal */
   opacity: 0;
@@ -803,7 +803,6 @@ section,
   font-weight: 500;
   padding-right: 50px;
   color: #fdfdfd;
-  text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
   /* Adiciona sombra ao texto */
 }
 
@@ -812,7 +811,6 @@ section,
   font-size: 0.9rem;
   margin-bottom: 0;
   padding-right: 50px;
-  text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link,
@@ -821,14 +819,15 @@ section,
   right: 50px;
   font-size: 24px;
   top: calc(50% - 14px);
-  color: #fdfdfd;
+  color: #fdfdfdea ;
   transition: 0.3s;
   line-height: 0;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: rgba(251, 219, 250, 1);
+  color: rgba(81, 42, 134, 0.9);
+
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
