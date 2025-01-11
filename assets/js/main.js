@@ -40,17 +40,6 @@
 
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
 
   /**
    * Preloader
@@ -191,3 +180,19 @@ if (typed) {
     backDelay: 2000
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona todos os links dentro do menu
+  const navLinks = document.querySelectorAll("#navmenu a");
+
+  // Adiciona um evento de clique para cada link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      // Remove a classe 'active' de todos os links
+      navLinks.forEach((nav) => nav.classList.remove("active"));
+
+      // Adiciona a classe 'active' ao link clicado
+      this.classList.add("active");
+    });
+  });
+});

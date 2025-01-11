@@ -34,10 +34,7 @@
   /* The default color of the main navmenu links */
   --nav-hover-color: #ac8de4;
   /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: rgba(1,
-      1,
-      9,
-      0.7);
+  --nav-mobile-background-color: #e1ccfb;
   /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #fdfdfd;
   /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -76,7 +73,7 @@
 body {
   color: var(--default-color);
   font-family: var(--default-font);
-  background: url(../img/hero-bg.png), rgba(0, 0, 0, 0.5);
+  background: url(../img/hero-bg.jpeg), rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-blend-mode: darken;
   position: relative;
@@ -84,13 +81,25 @@ body {
   background-attachment: fixed;
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(139, 83, 254, 0.65);
+  z-index: -1;
+}
+
+
 p {
-  font-size: 1.16rem;
+  font-size: 1.14rem;
 }
 
 @media (max-width: 768px) {
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -112,7 +121,7 @@ p {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--default-color);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -253,20 +262,17 @@ h6 {
     padding: 10px;
     margin: 5px;
     border-radius: 6px;
-    background-color: color-mix(in srgb,
-        var(--nav-mobile-background-color),
-        transparent 40%);
+    background-color: rgba(139, 83, 254, 0.9);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-    outline: 2px solid rgba(251, 219, 250, 0.45);
+    outline: 1px solid rgba(255, 255, 255, 0.6);
   }
 
   .navmenu ul::before {
     content: "";
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     left: 0;
     width: 100vw;
@@ -281,7 +287,6 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
     font-size: 18px;
@@ -290,41 +295,16 @@ h6 {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: 0.3s;
-  }
-
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  }
-
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 1px solid transparent;
+    /* Transparente por padrão */
   }
 
   .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
+  .navmenu a.active,
+  .navmenu a.active:focus {
+    /* border-bottom: 1px solid #a999e2; */
+    color: #ac8de4;
   }
 
   .mobile-nav-active {
@@ -411,7 +391,7 @@ h6 {
   justify-content: center;
   box-sizing: border-box;
   font-size: 1.04rem;
-  color: color-mix(in srgb, var(--accent-color), transparent 17%);
+  color: color-mix(in srgb, var(--accent-color), transparent 2%);
   margin: 0 12px;
   transition: 0.3s;
 }
@@ -423,7 +403,7 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 57%);
+  color: color-mix(in srgb, var(--accent-color), transparent 32%);
   border-color: var(--accent-color);
 }
 
@@ -614,23 +594,23 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 48px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .hero p {
   margin: 10px 0 0 0;
-  font-size: 1.14;
+  font-size: 1.14rem;
   color: var(--heading-color);
 }
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -649,14 +629,14 @@ section,
 #hero .social-links a {
   font-size: 1.3rem;
   display: inline-block;
-  color: color-mix(in srgb, var(--accent-color), transparent 12%);
+  color: var(--accent-color);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
 }
 
 #hero .social-links a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  color: color-mix(in srgb, var(--accent-color), transparent 30%);
 }
 
 .hero .countdown {
@@ -830,7 +810,7 @@ section,
 
 .portfolio .portfolio-item .portfolio-info p {
   color: #fdfdfd;
-  font-size: 14px;
+  font-size: 0.9rem;
   margin-bottom: 0;
   padding-right: 50px;
   text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
@@ -881,11 +861,11 @@ section,
 .contact::before {
   content: "";
   background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.73),
+      rgba(255, 255, 255, 0.07),
       /* parte superior */
-      rgba(0, 0, 0, 0.02),
+      rgba(255, 255, 255, 0.02),
       /* centro quase transparente */
-      rgba(0, 0, 0, 0.73)
+      rgba(255, 255, 255, 0.09)
       /* parte inferior */
     );
   position: absolute;
@@ -931,7 +911,7 @@ section,
 
 @media (max-width: 768px) {
   .contact .info-item p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
