@@ -776,9 +776,10 @@ section,
 }
 
 .portfolio .portfolio-item .portfolio-info {
-  background: url(../img/hero-bg.jpeg);
+  background: url(../img/luxa.org.png);
   opacity: 0;
   position: absolute;
+  border-radius: 10px;
   left: 30px;
   right: 30px;
   bottom: 0;
@@ -787,7 +788,7 @@ section,
   padding: 15px;
 }
 
-.portfolio .portfolio-item .portfolio-info::before {
+/* .portfolio .portfolio-item .portfolio-info::before {
   content: '';
   position: absolute;
   top: 0;
@@ -795,12 +796,13 @@ section,
   right: 0;
   bottom: 0;
   background: radial-gradient(circle, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  background-position: right 50%;
   z-index: -1;
   /* Coloca o pseudo-elemento atrás do conteúdo principal */
   opacity: 0;
   /* Inicialmente invisível */
   transition: opacity 0.3s ease-in-out;
-}
+} */
 
 .portfolio .portfolio-item:hover .portfolio-info::before {
   opacity: 1;
