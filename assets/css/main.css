@@ -303,8 +303,7 @@ h6 {
   .navmenu a:hover,
   .navmenu a.active,
   .navmenu a.active:focus {
-    /* border-bottom: 1px solid #a999e2; */
-    color: #ac8de4;
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .mobile-nav-active {
