@@ -73,7 +73,7 @@
 body {
   color: var(--default-color);
   font-family: var(--default-font);
-  background: url(../img/freepik-6.jpeg), rgba(0, 0, 0, 0.06);
+  background: url(../img/hero-bg.jpeg), rgba(0, 0, 0, 0.06);
   background-size: cover;
   background-blend-mode: darken;
   position: relative;
@@ -276,7 +276,7 @@ h6 {
   }
 
   .navmenu ul::before {
-    background: url(../img/luxa.org-opacity-changed-image\ \(1\)\ \(1\).png);
+    background: url(../img/nav-bg.png);
     content: "";
     position: absolute;
     top: 0;
