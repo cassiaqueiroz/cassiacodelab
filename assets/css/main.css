@@ -13,10 +13,7 @@
 
   /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 
-  --background-color: rgba(0,
-      0,
-      0,
-      1);
+  --background-color: rgb(255, 255, 255);
   /* Background color for the entire website, including individual sections */
   --default-color: #fdfdfd;
   /* Default color used for the majority of the text content across the entire website */
@@ -631,7 +628,7 @@ section,
 
 #hero p span {
   color: whitesmoke;
-  border-bottom: 1px solid #a999e2;
+  border-bottom: 1px solid #512A86; 
   letter-spacing: 1px;
   line-height: 1.5;
 }
