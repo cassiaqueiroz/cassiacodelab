@@ -762,6 +762,9 @@ section,
   margin-bottom: 0;
 }
 
+.about-2 p{
+  text-align: justify;
+}
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -784,7 +787,7 @@ section,
 }
 
 .portfolio p {
-  text-align: left;
+  text-align: justify;
 }
 
 #portfolio .small {
