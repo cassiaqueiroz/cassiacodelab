@@ -628,7 +628,7 @@ section,
 
 #hero p span {
   color: whitesmoke;
-  border-bottom: 1px solid #512A86; 
+  border-bottom: 2px dotted #fbdbfa; 
   letter-spacing: 1px;
   line-height: 1.5;
 }
