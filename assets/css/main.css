@@ -55,7 +55,7 @@
 }
 
 .transparent-background {
-  --background-color: rgba(0, 0, 0, 0.275);
+  --background-color: rgba(0, 0, 0, 0.27);
   --surface-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -72,15 +72,14 @@ body {
   font-family: var(--default-font);
   background: url(../img/image\ \(1\).png), rgba(0, 0, 0, 0.06);
   background-size: cover;
-  background-blend-mode:lighten;
+  background-blend-mode: lighten;
   position: relative;
   background-attachment: fixed;
 }
 
 @media (max-width: 768px) {
-
   body {
-    background-position: center right 30%;
+    background-position: right 30% top;
   }
 }
 
@@ -103,23 +102,6 @@ p {
   p {
     font-size: 1rem;
   }
-}
-
-.background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,
-      0,
-      0,
-      0.4);
-  /* Ajuste a cor e a opacidade conforme necessário */
-  z-index: 1;
-  pointer-events: none;
-  /* Permite que o conteúdo abaixo seja clicável */
 }
 
 a {
@@ -182,7 +164,7 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 14px rgba(251, 219, 250, 0.1), 0px 0 20px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1), 0px 1px 10px rgba(0, 0, 0, 0.05);
 }
 
 /*--------------------------------------------------------------
@@ -426,45 +408,6 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  overflow: hidden;
-  background: var(--background-color);
-  transition: all 0.6s ease-out;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #fdfdfd;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite, pulse 1.5s ease infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-/*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
@@ -507,49 +450,6 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
-.page-title {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  position: relative;
-}
-
-.page-title .heading {
-  padding: 80px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.page-title .heading h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.page-title nav {
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
-  padding: 20px 0;
-}
-
-.page-title nav ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.page-title nav ol li+li {
-  padding-left: 10px;
-}
-
-.page-title nav ol li+li::before {
-  content: "/";
-  display: inline-block;
-  padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
 
 /*--------------------------------------------------------------
 # Global Sections
@@ -558,7 +458,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 60px 10px;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -567,7 +467,7 @@ section,
 
   section,
   .section {
-    scroll-margin-top: 66px;
+    scroll-margin-top: 64px;
   }
 }
 
@@ -628,7 +528,7 @@ section,
 
 #hero p span {
   color: whitesmoke;
-  border-bottom: 2px dotted #fbdbfa; 
+  border-bottom: 2px dotted #fbdbfa;
   letter-spacing: 1px;
   line-height: 1.5;
 }
@@ -716,6 +616,13 @@ section,
 /*--------------------------------------------------------------
 # About 2 Section
 --------------------------------------------------------------*/
+.about-2 {
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: 0px -8px 20px rgba(0, 0, 0, 0.2), 0px -4px 12px rgba(255, 255, 255, 0.1);
+}
+
 .about-2 .profile-img {
   border: 3px solid color-mix(in srgb, var(--accent-color), transparent 20%);
   padding: 0;
@@ -762,9 +669,10 @@ section,
   margin-bottom: 0;
 }
 
-.about-2 p{
+.about-2 p {
   text-align: justify;
 }
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -795,7 +703,7 @@ section,
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: 500;
   padding-right: 50px;
@@ -841,35 +749,7 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  background-position: left center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-@media (max-width: 640px) {
-  .contact {
-    background-position: center 50px;
-    background-size: contain;
-  }
-}
-
-.contact::before {
-  content: "";
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.07),
-      /* parte superior */
-      rgba(255, 255, 255, 0.02),
-      /* centro quase transparente */
-      rgba(255, 255, 255, 0.09)
-      /* parte inferior */
-    );
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  /* Envia o pseudo-elemento para trás do conteúdo */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2), 0px -8px 30px rgba(255, 255, 255, 0.1);
 }
 
 .contact .info-item+.info-item {
@@ -908,47 +788,4 @@ section,
   .contact .info-item p {
     font-size: 1rem;
   }
-}
-
-.contact .php-email-form {
-  height: 100%;
-}
-
-.contact .php-email-form input[type="text"],
-.contact .php-email-form input[type="email"],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb,
-      var(--background-color),
-      transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type="text"]:focus,
-.contact .php-email-form input[type="email"]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type="text"]::placeholder,
-.contact .php-email-form input[type="email"]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type="submit"] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
