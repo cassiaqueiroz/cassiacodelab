@@ -101,7 +101,7 @@ p {
 
 @media (max-width: 768px) {
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -210,7 +210,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 15px;
+    font-size: 16px;
     font-family: var(--nav-font);
     letter-spacing: 1px;
     font-weight: 400;
@@ -301,7 +301,7 @@ h6 {
   .navmenu a:focus {
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -388,12 +388,12 @@ h6 {
 
 @media (max-width: 768px) {
   .footer .copyright p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
 .footer .social-links {
-  margin-top: 0.9rem;
+  margin-top: 1rem;
 }
 
 .footer .social-links a {
@@ -401,9 +401,9 @@ h6 {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 1.04rem;
+  font-size: 1.05rem;
   color: color-mix(in srgb, var(--accent-color), transparent 2%);
-  margin: 0 12px;
+  margin: 0 13px;
   transition: 0.3s;
 }
 
@@ -612,7 +612,7 @@ section,
 
 .hero p {
   margin: 10px 0 0 0;
-  font-size: 1.14rem;
+  font-size: 1.15rem;
   color: var(--heading-color);
 }
 
@@ -622,7 +622,7 @@ section,
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -805,7 +805,7 @@ section,
 
 .portfolio .portfolio-item .portfolio-info p {
   color: #fdfdfd;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 0;
   padding-right: 50px;
 }
@@ -906,7 +906,7 @@ section,
 
 @media (max-width: 768px) {
   .contact .info-item p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
