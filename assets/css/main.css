@@ -3,13 +3,13 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
-@import url("https://fonts.cdnfonts.com/css/samudera");
 @import url("https://fonts.cdnfonts.com/css/pt-mono");
+@import url('https://fonts.cdnfonts.com/css/expletus-sans-2');
 
 :root {
   --default-font: "PT Mono", sans-serif;
-  --heading-font: "Samudera", sans-serif;
-  --nav-font: "Samudera", sans-serif;
+  --heading-font: "Expletus Sans", sans-serif;
+  --nav-font: "Expletus Sans", sans-serif;
 
   /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 
