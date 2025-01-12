@@ -477,7 +477,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 45px;
   position: relative;
   letter-spacing: 1px;
 }
@@ -622,7 +622,32 @@ section,
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
-  box-shadow: 0px -8px 20px rgba(255, 255, 255, 0.2), 0px -4px 12px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 640px) {
+  .about-2 {
+    background-position: center 50px;
+    background-size: contain;
+  }
+}
+
+.about-2::before {
+  content: "";
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.2),
+      /* parte superior */
+      rgba(255, 255, 255, 0.1),
+      /* centro quase transparente */
+      rgba(255, 255, 255, 0.0)
+      /* parte inferior */
+    );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  /* Envia o pseudo-elemento para trás do conteúdo */
 }
 
 .about-2 .profile-img {
@@ -750,8 +775,37 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+
 .contact {
-  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2), 0px 4px 12px rgba(255, 255, 255, 0.1);
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .contact {
+    background-position: center 50px;
+    background-size: contain;
+  }
+}
+
+.contact::before {
+  content: "";
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.0),
+      /* parte superior */
+      rgba(255, 255, 255, 0.1),
+      /* centro quase transparente */
+      rgba(255, 255, 255, 0.2)
+      /* parte inferior */
+    );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  /* Envia o pseudo-elemento para trás do conteúdo */
 }
 
 .contact .info-item+.info-item {
@@ -788,6 +842,6 @@ section,
 
 @media (max-width: 768px) {
   .contact .info-item p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
