@@ -191,7 +191,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: rgba(255, 255, 255, 0.6);
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
@@ -219,7 +219,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: #512A86;
+    color: var(--default-color);
   }
 }
 
