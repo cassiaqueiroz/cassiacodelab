@@ -182,17 +182,70 @@ if (typed) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Seleciona todos os links dentro do menu
+  // Seleciona todos os links dentro do menu e as seções
   const navLinks = document.querySelectorAll("#navmenu a");
+  const sections = document.querySelectorAll("section");
 
-  // Adiciona um evento de clique para cada link
+  // Função para remover a classe 'active' de todos os links
+  function removeActiveClasses() {
+    navLinks.forEach((nav) => nav.classList.remove("active"));
+  }
+
+  // Adiciona evento de clique para ativar manualmente os links
   navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      // Remove a classe 'active' de todos os links
-      navLinks.forEach((nav) => nav.classList.remove("active"));
-
-      // Adiciona a classe 'active' ao link clicado
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Evita o comportamento padrão de âncora
+      removeActiveClasses();
       this.classList.add("active");
+
+      // Rola suavemente até a seção correspondente
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 50, // Ajuste para cabeçalhos fixos
+          behavior: "smooth",
+        });
+      }
     });
   });
+
+  // Função para destacar link ao rolar a página
+  function highlightNavOnScroll() {
+    let scrollPosition = window.scrollY + 300; // Ajuste para ativar mais cedo
+
+    sections.forEach((section) => {
+      if (
+        scrollPosition >= section.offsetTop &&
+        scrollPosition < section.offsetTop + section.offsetHeight
+      ) {
+        removeActiveClasses();
+        const activeLink = document.querySelector(
+          `#navmenu a[href="#${section.id}"]`
+        );
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
+      }
+    });
+
+    // Se o usuário estiver perto do final da página, ativar a última seção
+    const scrollBottom = window.innerHeight + window.scrollY;
+    if (scrollBottom >= document.body.offsetHeight - 10) {
+      removeActiveClasses();
+      const lastSection = sections[sections.length - 1];
+      const lastLink = document.querySelector(`#navmenu a[href="#${lastSection.id}"]`);
+      if (lastLink) {
+        lastLink.classList.add("active");
+      }
+    }
+  }
+
+  // Adiciona o evento de rolagem para ativar links conforme a seção visível
+  window.addEventListener("scroll", highlightNavOnScroll);
+
+  // Chamada inicial para definir o estado correto ao carregar a página
+  highlightNavOnScroll();
 });
+
