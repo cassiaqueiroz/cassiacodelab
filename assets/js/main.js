@@ -175,8 +175,8 @@ if (typed) {
   new Typed('.typed', {
     strings: typed_strings,
     loop: true,
-    typeSpeed: 100,
-    backSpeed: 50,
+    typeSpeed: 10,
+    backSpeed: 40,
     backDelay: 2000
   });
 }
