@@ -247,11 +247,11 @@ h6 {
     inset: 60px 20px 20px 20px;
     padding: 10px;
     margin: 5px;
-    border-radius: 6px;
+    border-radius: 10px;
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
-    background: linear-gradient(rgba(251, 219, 250, 0.55), rgba(169, 169, 169, 0.55));
+    background: rgba(253, 234, 253, 0.7);
   }
 
   .navmenu li {
