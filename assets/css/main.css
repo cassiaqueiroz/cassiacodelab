@@ -64,7 +64,7 @@
 }
 
 .transparent-background {
-  --background-color: rgba(0, 0, 0, 0.27);
+  --background-color: rgba(255, 255, 255, 0.27);
   --surface-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -80,7 +80,7 @@
 body {
   color: var(--default-color);
   font-family: var(--default-font);
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/bg.png);
+  background: url(../img/bg.png);
   background-size: cover;
   position: relative;
   background-attachment: fixed;
