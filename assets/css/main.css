@@ -80,7 +80,7 @@
 body {
   color: var(--default-color);
   font-family: var(--default-font);
-  background: url(../img/hero-bg.png), rgba(0, 0, 0, 0.06);
+  background: url(../img/hero-bg.png), rgba(255, 255, 255, 0.1);
   background-size: cover;
   background-blend-mode: lighten;
   position: relative;
