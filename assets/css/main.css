@@ -258,7 +258,7 @@ h6 {
   }
 
   .navmenu ul::before {
-    background: linear-gradient(rgba(20, 63, 182, 0.1), rgba(61, 17, 145, 0.43)), url(../img/luxa.org.png);
+    background: linear-gradient(rgba(20, 63, 182, 0.12), rgba(61, 17, 145, 0.55)), url(../img/luxa.org.png);
     content: "";
     position: absolute;
     top: 0;
