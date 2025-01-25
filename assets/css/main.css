@@ -24,9 +24,9 @@
 
   --background-color: rgb(255, 255, 255);
   /* Background color for the entire website, including individual sections */
-  --default-color: #fdfdfd;
+  --default-color: #181818;
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #fdfdfd;
+  --heading-color: #181818;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #fefefe;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -80,9 +80,8 @@
 body {
   color: var(--default-color);
   font-family: var(--default-font);
-  background: url(../img/bg.png), rgba(255, 255, 255, 0.06);
+  background: url(../img/bg.png);
   background-size: cover;
-  background-blend-mode: lighten;
   position: relative;
   background-attachment: fixed;
   text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra que dá o efeito de flutuação */
@@ -93,16 +92,6 @@ body {
   body {
     background-position: right 30% top;
   }
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 
@@ -269,7 +258,7 @@ h6 {
   }
 
   .navmenu ul::before {
-    background: linear-gradient(rgba(20, 63, 182, 0.1), rgba(61, 17, 145, 0.45)), url(../img/luxa.org.png);
+    background: linear-gradient(rgba(20, 63, 182, 0.1), rgba(61, 17, 145, 0.43)), url(../img/luxa.org.png);
     content: "";
     position: absolute;
     top: 0;
@@ -279,9 +268,9 @@ h6 {
     background-size: cover;
     /* A imagem de fundo cobre toda a área */
     background-repeat: no-repeat;
-    background-position: right 40%;
+    background-position: center 100%;
 
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     /* Rotaciona a imagem */
     z-index: -1;
     /* Coloca o fundo atrás do conteúdo */
@@ -396,7 +385,7 @@ h6 {
   justify-content: center;
   box-sizing: border-box;
   font-size: 1.05rem;
-  color: color-mix(in srgb, var(--accent-color), transparent 2%);
+  color: color-mix(in srgb, var(--default-color), transparent 2%);
   margin: 0 13px;
   transition: 0.3s;
 }
@@ -408,8 +397,7 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 32%);
-  border-color: var(--accent-color);
+  color: #fbdbfa;
 }
 
 
@@ -539,7 +527,7 @@ section,
 }
 
 #hero p span {
-  color: whitesmoke;
+  color: #181818;
   border-bottom: 2px dotted #fbdbfa;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -553,14 +541,14 @@ section,
 #hero .social-links a {
   font-size: 1.3rem;
   display: inline-block;
-  color: var(--accent-color);
+  color: var(--default-color);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
 }
 
 #hero .social-links a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 30%);
+  color: #fbdbfa;
 }
 
 .hero .countdown {
@@ -744,12 +732,12 @@ section,
   letter-spacing: 1px;
   font-weight: 500;
   padding-right: 50px;
-  color: #fdfdfd;
+  color: #181818;
   /* Adiciona sombra ao texto */
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  color: #fdfdfd;
+  color: #181818;
   font-size: 1rem;
   margin-bottom: 0;
   padding-right: 50px;
@@ -761,7 +749,7 @@ section,
   right: 50px;
   font-size: 24px;
   top: calc(50% - 14px);
-  color: #fdfdfdea;
+  color: #181818;
   transition: 0.3s;
   line-height: 0;
 }
