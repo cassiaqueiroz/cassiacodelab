@@ -84,7 +84,7 @@ body {
   background-size: cover;
   position: relative;
   background-attachment: fixed;
-  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra que dá o efeito de flutuação */
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); /* Sombra que dá o efeito de flutuação */
 
 }
 
@@ -226,7 +226,7 @@ h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: var(--default-color);
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -250,30 +250,7 @@ h6 {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
-    background-size: cover;
-    /* A imagem de fundo cobre toda a área */
-    /* A imagem de fundo é centralizada */
-    background-repeat: no-repeat;
-    /* Não repete a imagem */
-  }
-
-  .navmenu ul::before {
-    background: linear-gradient(rgba(20, 63, 182, 0.12), rgba(61, 17, 145, 0.25)), url(../img/luxa.org.png);
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    /* A imagem de fundo cobre toda a área */
-    background-repeat: no-repeat;
-    background-position: center 100%;
-
-    transform: rotate(360deg);
-    /* Rotaciona a imagem */
-    z-index: -1;
-    /* Coloca o fundo atrás do conteúdo */
+    background: rgba(251, 219, 250, 0.55);
   }
 
   .navmenu li {
@@ -306,7 +283,7 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fdfdfd;
+    color: var(--default-color);
     position: absolute;
     font-size: 32px;
     top: 15px;
