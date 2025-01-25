@@ -224,8 +224,8 @@ h6 {
   }
 }
 
-/* Navmenu - Mobile */
-@media (max-width: 1199px) {
+ /* Navmenu - Mobile */
+ @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--default-color);
     font-size: 28px;
@@ -310,12 +310,16 @@ h6 {
     0% {
       opacity: 0;
       transform: scale(0.98);
+      /* Começa menor */
     }
+
     100% {
       opacity: 1;
       transform: scale(1);
+      /* Cresce para o tamanho normal */
     }
   }
+
 }
 
 
@@ -396,7 +400,6 @@ h6 {
   bottom: 15px;
   z-index: 99999;
   background-color: #fbdbfa;
-  ;
   width: 40px;
   height: 40px;
   border-radius: 50%;
