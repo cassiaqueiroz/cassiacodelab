@@ -80,7 +80,7 @@
 body {
   color: var(--default-color);
   font-family: var(--default-font);
-  background: url(../img/bg.png);
+  background: url(../img/hero-bg.png);
   background-size: cover;
   position: relative;
   background-attachment: fixed;
@@ -89,7 +89,7 @@ body {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   body {
     background-position: right 30% top;
   }
@@ -192,7 +192,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(162, 133, 221, 0.6);
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
@@ -232,7 +232,7 @@ h6 {
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
   }
 
   .navmenu {
@@ -249,17 +249,16 @@ h6 {
     margin: 5px;
     border-radius: 10px;
     overflow-y: auto;
-    transition: 0.3s;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 9998;
-    background: rgba(253, 234, 253, 0.7);
+    background: rgba(253, 234, 253, 0.85);
   }
 
   .navmenu li {
     margin-top: 20px;
   }
 
-  .navmenu a,
-  .navmenu a:focus {
+  .navmenu a {
     padding: 10px 20px;
     font-family: var(--nav-font);
     font-size: 20px;
@@ -268,16 +267,15 @@ h6 {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: color 0.3s, border-bottom 0.3s;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
     border-bottom: 1px solid transparent;
     color: rgba(162, 133, 221, 0.6);
     text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
     /* Sombra que dá o efeito de flutuação */
   }
 
-  .navmenu a:hover,
-  .navmenu a.active,
-  .navmenu a.active:focus {
+
+  .navmenu a.active {
     color: var(--default-color);
   }
 
@@ -299,10 +297,10 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    transition: 0.3s;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     animation: fadeInScale 0.4s ease-out;
     display: block;
     overflow: hidden;
@@ -312,17 +310,14 @@ h6 {
     0% {
       opacity: 0;
       transform: scale(0.98);
-      /* Começa menor */
     }
-
     100% {
       opacity: 1;
       transform: scale(1);
-      /* Cresce para o tamanho normal */
     }
   }
-
 }
+
 
 /*--------------------------------------------------------------
 # Global Footer
