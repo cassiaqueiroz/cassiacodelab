@@ -251,7 +251,7 @@ h6 {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
-    background: rgba(251, 219, 250, 0.55);
+    background: linear-gradient(rgba(251, 219, 250, 0.55), rgba(169, 169, 169, 0.55));
   }
 
   .navmenu li {
