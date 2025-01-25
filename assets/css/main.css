@@ -80,7 +80,7 @@
 body {
   color: var(--default-color);
   font-family: var(--default-font);
-  background: url(../img/bg.png), rgba(255, 255, 255, 0.1);
+  background: url(../img/bg.png), rgba(255, 255, 255, 0.06);
   background-size: cover;
   background-blend-mode: lighten;
   position: relative;
