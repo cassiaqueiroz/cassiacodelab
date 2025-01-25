@@ -269,7 +269,7 @@ h6 {
     white-space: nowrap;
     transition: color 0.3s, border-bottom 0.3s;
     border-bottom: 1px solid transparent;
-    color: #a285dd;
+    color: rgba(162, 133, 221, 0.5);
     text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08); /* Sombra que dá o efeito de flutuação */
   }
 
@@ -507,7 +507,7 @@ section,
 
 #hero p span {
   color: #181818;
-  border-bottom: 2px dotted rgba(162, 133, 221, 0.6);
+  border-bottom: 2px dotted rgba(162, 133, 221, 0.7);
   letter-spacing: 1px;
   line-height: 1.5;
 }
@@ -712,12 +712,12 @@ section,
   letter-spacing: 1px;
   font-weight: 500;
   padding-right: 50px;
-  color: #a285dd;
+  color: var(--default-color);
   /* Adiciona sombra ao texto */
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  color: #a285dd;
+  color: var(--default-color);
   font-size: 1rem;
   margin-bottom: 0;
   padding-right: 50px;
@@ -729,7 +729,7 @@ section,
   right: 50px;
   font-size: 24px;
   top: calc(50% - 14px);
-  color: #a285dd;
+  color: var(--default-color);
   transition: 0.3s;
   line-height: 0;
 }
