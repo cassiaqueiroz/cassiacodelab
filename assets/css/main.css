@@ -80,7 +80,7 @@
 body {
   color: var(--default-color);
   font-family: var(--default-font);
-  background: url(../img/hero-bg.png);
+  background: url(../img/bg.png);
   background-size: cover;
   position: relative;
   background-attachment: fixed;
