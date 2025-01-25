@@ -258,7 +258,7 @@ h6 {
   }
 
   .navmenu ul::before {
-    background: linear-gradient(rgba(20, 63, 182, 0.12), rgba(61, 17, 145, 0.55)), url(../img/luxa.org.png);
+    background: linear-gradient(rgba(20, 63, 182, 0.12), rgba(61, 17, 145, 0.25)), url(../img/luxa.org.png);
     content: "";
     position: absolute;
     top: 0;
@@ -528,7 +528,7 @@ section,
 
 #hero p span {
   color: #181818;
-  border-bottom: 2px dotted #fbdbfa;
+  border-bottom: 2px dotted rgba(61, 17, 145, 0.25);
   letter-spacing: 1px;
   line-height: 1.5;
 }
@@ -649,7 +649,7 @@ section,
 }
 
 .about-2 .profile-img {
-  border: 3px solid color-mix(in srgb, var(--accent-color), transparent 20%);
+  border: 3px solid rgba(61, 17, 145, 0.25);
   padding: 0;
   width: 12rem;
   height: auto;
