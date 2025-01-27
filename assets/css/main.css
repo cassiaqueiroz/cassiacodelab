@@ -379,7 +379,7 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: #fbdbfa;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
 
@@ -532,7 +532,7 @@ section,
 }
 
 #hero .social-links a:hover {
-  color: #fbdbfa;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
 .hero .countdown {
