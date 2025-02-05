@@ -332,7 +332,7 @@ h6 {
 
 .language-link {
   color: rgba(162, 133, 221, 0.6);
-  padding: 10px;
+  padding: 5px 10px;
   font-size: 14px;
   /* Reduz o tamanho da fonte */
   font-family: var(--nav-font);
@@ -344,7 +344,7 @@ h6 {
   white-space: nowrap;
   transition: 0.3s;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
   /* Adiciona bordas arredondadas */
   background: rgba(253, 234, 253, 0.85);
   /* Fundo leve para destacar */
