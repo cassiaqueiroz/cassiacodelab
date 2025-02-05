@@ -176,6 +176,8 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    display: flex;
+    align-items: center;
   }
 
   .navmenu ul {
@@ -224,8 +226,8 @@ h6 {
   }
 }
 
- /* Navmenu - Mobile */
- @media (max-width: 1199px) {
+/* Navmenu - Mobile */
+@media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--default-color);
     font-size: 28px;
@@ -271,9 +273,7 @@ h6 {
     border-bottom: 1px solid transparent;
     color: rgba(162, 133, 221, 0.6);
     text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
-    /* Sombra que dá o efeito de flutuação */
   }
-
 
   .navmenu a.active {
     color: var(--default-color);
@@ -300,7 +300,7 @@ h6 {
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
-  .mobile-nav-active .navmenu > ul {
+  .mobile-nav-active .navmenu>ul {
     animation: fadeInScale 0.4s ease-out;
     display: block;
     overflow: hidden;
@@ -310,18 +310,53 @@ h6 {
     0% {
       opacity: 0;
       transform: scale(0.98);
-      /* Começa menor */
     }
 
     100% {
       opacity: 1;
       transform: scale(1);
-      /* Cresce para o tamanho normal */
     }
   }
-
 }
 
+/*--------------------------------------------------------------
+# Language Switcher
+--------------------------------------------------------------*/
+.language-switcher {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Adiciona um espaço entre o menu de navegação e o seletor de idiomas */
+}
+
+.language-link {
+  color: rgba(162, 133, 221, 0.6);
+  padding: 10px;
+  font-size: 14px;
+  /* Reduz o tamanho da fonte */
+  font-family: var(--nav-font);
+  letter-spacing: 1px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: 0.3s;
+  text-decoration: none;
+  border-radius: 5px;
+  /* Adiciona bordas arredondadas */
+  background: rgba(253, 234, 253, 0.85);
+  /* Fundo leve para destacar */
+}
+
+.language-link:hover,
+.language-link-active:focus,
+.language-link-active,
+.language-link:focus {
+  color: var(--default-color);
+  /* Fundo mais escuro ao passar o mouse */
+}
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -690,7 +725,7 @@ section,
   position: relative;
 }
 
-.portfolio .portfolio-item img{
+.portfolio .portfolio-item img {
   border-radius: 8px;
 }
 
