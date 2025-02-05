@@ -358,6 +358,28 @@ h6 {
   /* Fundo mais escuro ao passar o mouse */
 }
 
+/* Ajuste para telas menores */
+@media (max-width: 991px) {
+  .language-switcher {
+    position: static; /* Remove a posição absoluta */
+    transform: none; /* Remove a transformação */
+    display: flex;
+    justify-content: center; /* Centraliza */
+    width: 100%; /* Garante que ocupe a largura total */
+    margin-top: 10px; /* Dá um espaçamento extra */
+  }
+
+  .navmenu {
+    position: absolute;
+    right: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
