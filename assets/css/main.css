@@ -263,7 +263,7 @@ h6 {
   .navmenu a {
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     display: flex;
     align-items: center;
