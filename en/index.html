@@ -120,7 +120,8 @@
 
           <div class="row gy-4 justify-content-around">
             <div class="col-lg-4 profile-img align-self-center">
-              <img src="../assets/img/profile.png" class="img-fluid" alt="Photo of Cássia Queiroz smiling" loading="lazy">
+              <img src="../assets/img/profile.png" class="img-fluid" alt="Photo of Cássia Queiroz smiling"
+                loading="lazy">
             </div>
             <div class="col-lg-8 content justify-content-center">
               <p>I'm a developer from Brazil who loves creating unique websites, combining colors, fonts, and
@@ -140,43 +141,103 @@
           <h2>Portfolio</h2>
         </div>
 
-        <!-- Descrição e Texto Pequeno -->
+        <!-- Description and Small Text -->
         <div class="container">
-          <p>I've had the opportunity to work on various projects, and I'd like to highlight, in addition to this
-            website:</p>
-          <small class="small">(Click on the image to access the link)</small>
+          <p>I had the opportunity to participate in various projects, and I'd like to highlight, besides this website:
+          </p>
+          <small class="small d-block mb-4">(Click on the image to access the link)</small>
         </div>
 
         <!-- Portfolio Items -->
         <div class="container">
 
-          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <!-- Completed Projects Section -->
+          <div class="portfolio-status-section" data-aos="fade-up">
+            <h3 class="status-title">
+              <i class="bi bi-check-circle me-2"></i>Completed
+            </h3>
+            <div class="row gy-4">
 
-              <!-- Portfolio Item -->
-              <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-app">
-                <img src="../assets/img/portfolio/portfolio-1.png" class="img-fluid" alt="Larissa Borges Project"
+              <!-- Project: Dra. Larissa Borges -->
+              <div class="col-lg-12 col-md-12 portfolio-item">
+                <img src="../assets/img/portfolio/dra-larissa.png" class="img-fluid" alt="Dra. Larissa Borges Website"
                   loading="lazy">
                 <div class="portfolio-info">
-                  <a href="https://www.dralarissaborges.com.br/" title="Portfolio Details" target="_blank"
-                    aria-label="Dra. Larissa's Website">
-                    <h3>Larissa Borges Psychiatrist</h3>
-                    <p>Using Bootstrap</p>
-                    <br>
-                    <a href="https://www.dralarissaborges.com.br/" title="Portfolio Details" target="_blank"
-                      class="details-link" aria-label="Dra. Larissa's Website">
+                  <a href="https://www.dralarissaborges.com.br/" target="_blank" aria-label="Dra. Larissa's Website">
+                    <h3>Dra. Larissa Borges</h3>
+                    <p>Professional website for psychiatry, with clean design and SEO optimization.</p>
+                    <a href="https://www.dralarissaborges.com.br/" target="_blank" class="details-link">
                       <i class="bi bi-link-45deg"></i>
                     </a>
                   </a>
                 </div>
-              </div><!-- End Portfolio Item -->
+              </div>
 
-            </div><!-- End Portfolio Container -->
-          </div><!-- End Isotope Layout -->
+            </div>
+          </div>
+
+          <!-- Ongoing Projects Section -->
+          <div class="portfolio-status-section mt-5" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="status-title">
+              <i class="bi bi-gear me-2"></i>Ongoing
+            </h3>
+            <div class="row gy-4">
+
+              <!-- Project: Dr. Marcos Fernandes -->
+              <div class="col-lg-12 col-md-12 portfolio-item">
+                <img src="../assets/img/portfolio/dr-marcos.png" class="img-fluid" alt="Dr. Marcos Fernandes Website"
+                  loading="lazy">
+                <div class="portfolio-info">
+                  <a href="https://drmarcosfernandes.com" target="_blank" aria-label="Dr. Marcos Website">
+                    <h3>Dr. Marcos Fernandes</h3>
+                    <p>Medical website with an integrated blog where the professional can independently post new
+                      articles.</p>
+                    <a href="https://drmarcosfernandes.com" target="_blank" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project: Clínica Santa Alice -->
+              <div class="col-lg-12 col-md-12 portfolio-item">
+                <img src="../assets/img/portfolio/santa-alice.png" class="img-fluid" alt="Clínica Santa Alice Website"
+                  loading="lazy">
+                <div class="portfolio-info">
+                  <a href="https://cassiaqueiroz.github.io/clinica-santa-alice/" target="_blank"
+                    aria-label="Clínica Santa Alice">
+                    <h3>Clínica Santa Alice</h3>
+                    <p>Institutional website with detailed information about medical services.</p>
+                    <a href="https://cassiaqueiroz.github.io/clinica-santa-alice/" target="_blank" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project: Dra. Franciane Rossone -->
+              <div class="col-lg-12 col-md-12 portfolio-item">
+                <img src="../assets/img/portfolio/dra-franciane.png" class="img-fluid" alt="Dra. Franciane Rossone Website"
+                  loading="lazy">
+                <div class="portfolio-info">
+                  <a href="https://cassiaqueiroz.github.io/dra-franciane-rossone/" target="_blank"
+                    aria-label="Dra. Franciane's Website">
+                    <h3>Dra. Franciane Rossone</h3>
+                    <p>Professional website with a clean design and dark background for comfortable reading.</p>
+                    <a href="https://cassiaqueiroz.github.io/dra-franciane-rossone/" target="_blank"
+                      class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
 
         </div><!-- End Container -->
-
       </section><!-- End Portfolio Section -->
+
 
       <!-- Contact Section -->
       <section id="contact" class="contact section transparent-background">

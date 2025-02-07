@@ -361,12 +361,17 @@ h6 {
 /* Ajuste para telas menores */
 @media (max-width: 991px) {
   .language-switcher {
-    position: static; /* Remove a posição absoluta */
-    transform: none; /* Remove a transformação */
+    position: static;
+    /* Remove a posição absoluta */
+    transform: none;
+    /* Remove a transformação */
     display: flex;
-    justify-content: center; /* Centraliza */
-    width: 100%; /* Garante que ocupe a largura total */
-    margin-top: 10px; /* Dá um espaçamento extra */
+    justify-content: center;
+    /* Centraliza */
+    width: 100%;
+    /* Garante que ocupe a largura total */
+    margin-top: 10px;
+    /* Dá um espaçamento extra */
   }
 
   .navmenu {
@@ -740,81 +745,83 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
+# Portfolio Section - Custom Styling
 --------------------------------------------------------------*/
+/* Destaques de Seções */
+.portfolio h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--default-color);
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.portfolio .small {
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #444;
+}
 
 .portfolio .portfolio-item {
   position: relative;
-}
-
-.portfolio .portfolio-item img {
+  overflow: hidden;
   border-radius: 8px;
 }
 
+.portfolio .portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
 
-.portfolio .portfolio-item .portfolio-info {
-  background: rgba(253, 234, 253, 0.75);
+.portfolio .status-title i {
+  color: #a285dd;
+}
+
+.portfolio .portfolio-info {
+  background: rgba(253, 234, 253, 0.85);
   text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  /* Sombra que dá o efeito de flutuação */
   opacity: 0;
   position: absolute;
-  border-radius: 10px;
-  left: 30px;
-  right: 30px;
+  left: 20px;
+  right: 20px;
   bottom: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
   padding: 15px;
-}
-
-.portfolio p {
-  text-align: justify;
-}
-
-#portfolio .small {
-  text-align: left;
-}
-
-.portfolio .portfolio-item .portfolio-info h3 {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  font-weight: 500;
-  padding-right: 50px;
-  color: var(--default-color);
-  /* Adiciona sombra ao texto */
-}
-
-.portfolio .portfolio-item .portfolio-info p {
-  color: var(--default-color);
-  font-size: 1rem;
-  margin-bottom: 0;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
-  font-size: 24px;
-  top: calc(50% - 14px);
-  color: #a285dd;
-  transition: 0.3s;
-  line-height: 0;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: var(--default-color);
-}
-
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 14px;
-  font-size: 28px;
+  border-radius: 10px;
 }
 
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
-  bottom: 20px;
+  bottom: 15px;
+}
+
+.portfolio .portfolio-info h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--default-color);
+}
+
+.portfolio .portfolio-info p {
+  font-size: 1rem;
+  text-align: justify;
+  color: var(--default-color);
+}
+
+.portfolio .portfolio-info .details-link {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 14px);
+  font-size: 24px;
+  color: #a285dd;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-info .details-link:hover {
+  color: var(--default-color);
 }
 
 /*--------------------------------------------------------------
