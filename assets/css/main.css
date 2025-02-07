@@ -759,7 +759,7 @@ section,
 .portfolio .small {
   display: block;
   text-align: left;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #444;
 }
 
@@ -795,11 +795,12 @@ section,
 
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
-  bottom: 15px;
+  bottom: 5px;
 }
 
 .portfolio .portfolio-info h3 {
-  font-size: 1.2rem;
+  overflow: hidden;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 1px;
   color: var(--default-color);
@@ -807,14 +808,14 @@ section,
 
 .portfolio .portfolio-info p {
   font-size: 1rem;
-  text-align: justify;
+  text-align: left;
   color: var(--default-color);
 }
 
 .portfolio .portfolio-info .details-link {
   position: absolute;
   right: 20px;
-  top: calc(50% - 14px);
+  transform: translateY(-50%);
   font-size: 24px;
   color: #a285dd;
   transition: 0.3s;
