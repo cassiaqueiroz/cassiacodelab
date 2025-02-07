@@ -795,12 +795,12 @@ section,
 
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
-  bottom: 5px;
+  bottom: 7px;
 }
 
 .portfolio .portfolio-info h3 {
   overflow: hidden;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
   color: var(--default-color);
