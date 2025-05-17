@@ -228,7 +228,7 @@ h6 {
     display: none;
     position: absolute;
     inset: 55px 15px 15px 15px;
-    padding: 10px;
+    padding: 15px 0;
     margin: 0;
     border-radius: 10px;
     background-color: rgba(253, 234, 253, 0.85);
@@ -237,11 +237,9 @@ h6 {
     z-index: 9998;
   }
 
-  .navmenu a {
-    position: relative;
-    white-space: nowrap;
-    margin-top: 21px;
-    padding: 8px 0 8px 20px;
+  .navmenu li {
+    padding: 8px 20px;
+    margin: 5px 0;
   }
 
   .navmenu a,
@@ -250,11 +248,24 @@ h6 {
     display: inline-block;
     font-family: var(--nav-font);
     color: var(--default-color);
+    padding: 5px 0;
+    position: relative;
   }
 
-  .navmenu a:hover,
-  .navmenu .active {
-    border-bottom: 2px solid rgba(162, 133, 221, 0.6);
+  .navmenu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgba(162, 133, 221, 0.6);
+    transition: width 0.3s ease;
+  }
+
+  .navmenu a:hover::after,
+  .navmenu .active::after {
+    width: 100%;
   }
 
   .mobile-nav-toggle {
@@ -287,7 +298,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
