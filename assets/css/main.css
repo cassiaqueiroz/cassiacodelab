@@ -184,7 +184,6 @@ h6 {
   .navmenu>ul>li {
     position: relative;
     white-space: nowrap;
-    padding: 8px 0 8px 20px;
   }
 
   .navmenu a,
@@ -238,8 +237,8 @@ h6 {
   }
 
   .navmenu li {
-    padding: 8px 20px;
-    margin: 5px 0;
+    padding: 8px 0 8px 20px;
+    margin-top: 21px;
   }
 
   .navmenu a,
@@ -248,7 +247,7 @@ h6 {
     display: inline-block;
     font-family: var(--nav-font);
     color: var(--default-color);
-    padding: 5px 0;
+    padding: 0 10px;
     position: relative;
   }
 
@@ -299,7 +298,7 @@ h6 {
   }
 
   .mobile-nav-active .navmenu > ul {
-    display: block;
+    display: inline-block;
   }
 }
 
