@@ -292,7 +292,7 @@ h6 {
     position: fixed;
     inset: 0;
     overflow: hidden;
-    background: transparent;
+    background: #D4DEF4;
     transition: 0.3s;
   }
 
