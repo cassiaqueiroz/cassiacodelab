@@ -201,7 +201,6 @@ h6 {
   }
 
   .navmenu a:hover,
-  .navmenu .active,
   .navmenu li:hover>a {
     color: var(--default-color);
     border-bottom: 2px solid rgba(162, 133, 221, 0.6);

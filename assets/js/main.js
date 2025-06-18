@@ -1,4 +1,4 @@
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -8,8 +8,8 @@
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
     if (!selectHeader.classList.contains('scroll-up-sticky') &&
-        !selectHeader.classList.contains('sticky-top') &&
-        !selectHeader.classList.contains('fixed-top')) return;
+      !selectHeader.classList.contains('sticky-top') &&
+      !selectHeader.classList.contains('fixed-top')) return;
     window.scrollY > 100
       ? selectBody.classList.add('scrolled')
       : selectBody.classList.remove('scrolled');
@@ -36,7 +36,7 @@
    * External links open normally.
    */
   document.querySelectorAll('#navmenu a').forEach(link => {
-    link.addEventListener('click', function(event) {
+    link.addEventListener('click', function (event) {
       const href = this.getAttribute('href');
 
       // Fecha o menu mobile em qualquer clique
@@ -108,14 +108,14 @@
    */
   function updateCountDown(countDownItem) {
     const timeleft = new Date(countDownItem.getAttribute('data-count')).getTime()
-                   - new Date().getTime();
-    const days    = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-    const hours   = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      - new Date().getTime();
+    const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-    countDownItem.querySelector('.count-days').innerHTML    = days;
-    countDownItem.querySelector('.count-hours').innerHTML   = hours;
+    countDownItem.querySelector('.count-days').innerHTML = days;
+    countDownItem.querySelector('.count-hours').innerHTML = hours;
     countDownItem.querySelector('.count-minutes').innerHTML = minutes;
     countDownItem.querySelector('.count-seconds').innerHTML = seconds;
   }
@@ -134,12 +134,12 @@
    * Init isotope layout and filters
    */
   document.querySelectorAll('.isotope-layout').forEach(isotopeItem => {
-    let layout = isotopeItem.getAttribute('data-layout')       || 'masonry';
+    let layout = isotopeItem.getAttribute('data-layout') || 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') || '*';
-    let sort   = isotopeItem.getAttribute('data-sort')         || 'original-order';
+    let sort = isotopeItem.getAttribute('data-sort') || 'original-order';
     let initIsotope;
 
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -149,7 +149,7 @@
     });
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function () {
         isotopeItem.querySelector('.filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({ filter: this.getAttribute('data-filter') });
@@ -198,7 +198,7 @@
         if (pos >= section.offsetTop && pos < section.offsetTop + section.offsetHeight) {
           removeActive();
           const active = select(`#navmenu a[href="#${section.id}"]`);
-          active ?? active.classList.add('active');
+          if (active) active.classList.add('active');
         }
       });
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
