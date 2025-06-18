@@ -191,23 +191,35 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 19px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
     font-family: var(--nav-font);
     white-space: nowrap;
     transition: 0.3s;
-    color: var(--default-color);
+    color: #181818;
     border-bottom: 2px solid transparent;
   }
 
-  .navmenu a:hover,
-  .navmenu li:hover>a {
-    color: var(--default-color);
-    border-bottom: 2px solid rgba(162, 133, 221, 0.6);
+  /* Linha animada */
+  .navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgba(162, 133, 221, 0.6);
+    transition: width 0.3s ease;
   }
 
-  .navmenu .active {
-    border-bottom: 2px solid rgba(162, 133, 221, 0.6);
+  .navbar a:hover::after,
+  .navbar .active::after {
+    width: 100%;
+  }
+
+  /* Mudar a cor do link ativo */
+  .navbar .active {
+    color: #181818;
   }
 
   .mobile-nav-toggle {
@@ -233,6 +245,7 @@ h6 {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
+    list-style: none;
   }
 
   .navmenu li {
@@ -245,7 +258,7 @@ h6 {
     font-size: 18px;
     display: inline-block;
     font-family: var(--nav-font);
-    color: var(--default-color);
+    color: #181818;
     padding: 0 10px;
     position: relative;
   }
@@ -313,7 +326,7 @@ h6 {
 }
 
 .language-link {
-  color: rgba(162, 133, 221, 0.6);
+  color: rgba(162, 133, 221, 0.75);
   padding: 5px 10px;
   font-size: 14px;
   /* Reduz o tamanho da fonte */
