@@ -191,7 +191,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     font-family: var(--nav-font);
     white-space: nowrap;
@@ -229,7 +229,7 @@ h6 {
     padding: 15px 0;
     margin: 0;
     border-radius: 10px;
-    background-color: rgba(253, 234, 253, 0.85);
+    background-color: rgba(253, 234, 253, 0.8);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -245,9 +245,16 @@ h6 {
     font-size: 18px;
     display: inline-block;
     font-family: var(--nav-font);
-    color: var(--default-color);
     padding: 0 10px;
     position: relative;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    white-space: nowrap;
+    color: #181818;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
   }
 
   .navmenu a::after {
@@ -292,12 +299,16 @@ h6 {
     position: fixed;
     inset: 0;
     overflow: hidden;
-    background: #D4DEF4;
+    background: #d4def4af;
     transition: 0.3s;
   }
 
   .mobile-nav-active .navmenu>ul {
-    display: inline-block;
+    display: block;
+  }
+
+  .mobile-nav-active .navbar ul {
+    display: block;
   }
 }
 
@@ -389,7 +400,7 @@ h6 {
 
 .footer .copyright p {
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 0.88rem;
 }
 
 @media (max-width: 768px) {
