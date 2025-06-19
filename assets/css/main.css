@@ -559,13 +559,12 @@ section,
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
 #hero p span {
   color: #181818;
-  border-bottom: 2px dotted rgba(162, 133, 221, 0.7);
   letter-spacing: 1px;
   line-height: 1.5;
 }
