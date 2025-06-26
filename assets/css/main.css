@@ -474,7 +474,6 @@ h6 {
 
 .scroll-top:hover {
   background-color: rgba(162, 133, 221, 0.1);
-  color: var(--contrast-color);
 }
 
 .scroll-top.active {
