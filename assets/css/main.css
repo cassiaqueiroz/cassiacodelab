@@ -331,7 +331,7 @@ h6 {
 }
 
 .language-link {
-  color: rgba(162, 133, 221, 0.85);
+  color: #181818;
   padding: 0.3rem;
   font-size: 14px;
   /* Reduz o tamanho da fonte */
@@ -468,7 +468,7 @@ h6 {
 .scroll-top i {
   font-size: 26px;
   font-weight: 700;
-  color: #a285dd;
+  color: #181818;
   line-height: 0;
 }
 
