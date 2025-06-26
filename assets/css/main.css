@@ -332,8 +332,8 @@ h6 {
 
 .language-link {
   color: rgba(162, 133, 221, 0.85);
-  padding: 0.18rem;
-  font-size: 12px;
+  padding: 0.3rem;
+  font-size: 14px;
   /* Reduz o tamanho da fonte */
   font-family: var(--nav-font);
   letter-spacing: 1px;
