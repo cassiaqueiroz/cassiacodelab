@@ -337,7 +337,7 @@ h6 {
   /* Reduz o tamanho da fonte */
   font-family: var(--nav-font);
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
