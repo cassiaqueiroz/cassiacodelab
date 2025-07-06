@@ -324,40 +324,181 @@ h6 {
 # Language Switcher
 --------------------------------------------------------------*/
 .language-switcher {
-  padding: 0;
   display: flex;
-  align-items: center;
   gap: 0.5rem;
+  color: #2d3748;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(162, 133, 221, 0.1);
+  box-shadow: 0 2px 12px rgba(162, 133, 221, 0.08);
 }
 
 .language-link {
-  color: #181818;
-  font-size: 1rem;
-  font-family: var(--nav-font);
-  letter-spacing: 1px;
-  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
-  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #2d3748;
+  font-family: var(--heading-font);
+  font-size: 0.8rem;
+  line-height: 1;
+  text-align: center;
   text-decoration: none;
-  border: 2px solid #eee;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 36px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(162, 133, 221, 0.15);
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(162, 133, 221, 0.1);
   cursor: pointer;
   padding: 0;
+  margin: 0;
+  transform: translateY(0);
+  box-sizing: border-box;
+  text-indent: -2px;
 }
 
-.language-link:hover,
-.language-link-active:focus,
-.language-link-active,
+.language-link.language-link-active,
+.language-link:hover {
+  border: 2px solid rgba(162, 133, 221, 0.6);
+  background: linear-gradient(135deg, rgba(162, 133, 221, 0.15) 0%, rgba(162, 133, 221, 0.25) 100%);
+  box-shadow: 0 4px 16px rgba(162, 133, 221, 0.25), 0 2px 8px rgba(162, 133, 221, 0.15);
+  transform: translateY(-1px);
+  color: #5a4d73;
+}
+
+.language-link:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(162, 133, 221, 0.2);
+}
+
+.language-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.language-link:hover::before {
+  opacity: 1;
+}
+
+/* Ensure perfect text centering */
+.language-link span,
+.language-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix any potential text offset issues */
+.language-link * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.lang-label {
+  font-size: 0.8rem;
+  color: #2d3748;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin-left: 0.5rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.language-switcher:hover .lang-label {
+  opacity: 1;
+  color: #2d3748;
+}
+
+.lang-flag {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .language-switcher {
+    gap: 0.3rem;
+    padding: 0.4rem;
+    width: auto;
+    max-width: fit-content;
+  }
+
+  .language-link {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+    font-size: 0.7rem;
+  }
+
+  .lang-flag {
+    width: 16px;
+    height: 16px;
+  }
+
+  .lang-label {
+    font-size: 0.7rem;
+    margin-left: 0.2rem;
+  }
+}
+
+/* Accessibility improvements */
 .language-link:focus {
-  border: 2px solid rgba(162, 133, 221, 0.8);
-  background: rgba(162, 133, 221, 0.1);
-  box-shadow: 0 2px 8px rgba(162,133,221,0.12);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(162, 133, 221, 0.3), 0 4px 16px rgba(162, 133, 221, 0.25);
+}
+
+.language-link:focus-visible {
+  outline: 2px solid rgba(162, 133, 221, 0.8);
+  outline-offset: 2px;
+}
+
+/* Animation for smooth transitions */
+@keyframes langBtnPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.language-link.language-link-active {
+  animation: langBtnPulse 0.3s ease-out;
 }
 
 /* Ajuste para telas menores */
@@ -370,8 +511,11 @@ h6 {
     display: flex;
     justify-content: center;
     /* Centraliza */
-    width: 100%;
-    /* Garante que ocupe a largura total */
+    width: auto !important;
+    /* Override any width constraints */
+    max-width: fit-content;
+    margin: 0 auto;
+    /* Center the container */
   }
 
   .navmenu {
