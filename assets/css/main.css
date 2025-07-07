@@ -1365,12 +1365,9 @@ section,
   content: '';
   position: absolute;
   top: 0;
-  left: 50%;
   width: 100vw;
   height: 100%;
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(162, 133, 221, 0.15);
   border-bottom: 1px solid rgba(162, 133, 221, 0.15);
   box-shadow: 
@@ -1387,7 +1384,6 @@ section,
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(162, 133, 221, 0.2), transparent);
   z-index: 1;
 }
 
@@ -1672,8 +1668,8 @@ section,
   justify-content: flex-start;
   text-align: left;
   max-width: 600px;
-  margin: 0 0 40px 0;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .contact .info-item i {
@@ -1836,8 +1832,6 @@ section,
   }
 
   .portfolio .status-title::before {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
     background: rgba(255, 255, 255, 0.08);
   }
 
