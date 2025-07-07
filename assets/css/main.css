@@ -1752,7 +1752,6 @@ section,
 
   .contact .row {
     display: flex;
-    justify-content: center;
     width: 100%;
   }
 
