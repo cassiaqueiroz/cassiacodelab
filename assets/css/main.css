@@ -145,7 +145,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 48px;
+  max-height: 40px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   border-radius: 50%;
@@ -301,7 +301,7 @@ h6 {
   .mobile-nav-toggle {
     display: inline-block;
     color: #181818;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     line-height: 0;
     transition: 0.5s;
