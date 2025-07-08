@@ -194,7 +194,7 @@ h6 {
     display: inline-block;
     align-items: center;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     font-family: var(--nav-font);
     white-space: nowrap;
@@ -264,7 +264,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    font-size: 16px;
+    font-size: 18px;
     padding: 0 10px;
     display: inline-block;
     font-family: var(--nav-font);
@@ -387,7 +387,7 @@ h6 {
   border-radius: 50%;
   color: #181818;
   font-family: var(--heading-font);
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1;
   text-align: center;
   text-decoration: none;
@@ -460,7 +460,7 @@ h6 {
 }
 
 .lang-label {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #4a5568;
   font-family: var(--heading-font);
   font-weight: 500;
@@ -496,7 +496,7 @@ h6 {
     width: 32px;
     height: 32px;
     flex-basis: 32px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 
   .lang-flag {
@@ -505,7 +505,7 @@ h6 {
   }
 
   .lang-label {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     margin-left: 0.3rem;
   }
 }
@@ -748,7 +748,7 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 120px 0 80px;
+  padding: 120px 10px 80px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -873,7 +873,7 @@ section,
 @media (max-width: 768px) {
   .hero {
     min-height: 90vh;
-    padding: 100px 0 60px;
+    padding: 100px 10px 60px 10px;
   }
 
   .hero h1 {
@@ -1085,7 +1085,7 @@ section,
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
-  padding: 80px 0;
+  padding: 80px 10px;
   overflow: hidden;
 }
 
@@ -1279,7 +1279,7 @@ section,
 
 @media (max-width: 768px) {
   .about-2 {
-    padding: 60px 0;
+    padding: 60px 10px;
   }
 
   .about-2 .row {
@@ -1329,7 +1329,7 @@ section,
 # Portfolio Section - Clean Modern Design
 --------------------------------------------------------------*/
 .portfolio {
-  padding: 80px 0;
+  padding: 80px 10px;
   position: relative;
 }
 
@@ -1472,7 +1472,7 @@ section,
 
 /* Portfolio info styling */
 .portfolio .portfolio-info {
-  background: rgba(253, 234, 253, 0.95);
+  background: rgba(255, 255, 255, 0.85);
   /* Fallback for browsers that don't support backdrop-filter */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1488,7 +1488,7 @@ section,
 /* Mobile fallback - remove backdrop-filter for better performance */
 @media (max-width: 768px) {
   .portfolio .portfolio-info {
-    background: rgba(253, 234, 253, 0.98);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
@@ -1550,7 +1550,7 @@ section,
 
 @media (max-width: 768px) {
   .portfolio {
-    padding: 60px 0;
+    padding: 60px 10px;
   }
 
   .portfolio .row {
@@ -1628,14 +1628,14 @@ section,
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
-  padding: 80px 0;
+  padding: 80px 10px;
 }
 
 @media (max-width: 640px) {
   .contact {
     background-position: center 50px;
     background-size: contain;
-    padding: 60px 0;
+    padding: 60px 10px;
   }
 }
 
@@ -1667,7 +1667,6 @@ section,
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-  max-width: 600px;
   margin: 0 auto;
   padding: 0;
 }
@@ -1704,6 +1703,7 @@ section,
   padding: 0;
   margin-bottom: 0;
   font-size: 0.875rem;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
