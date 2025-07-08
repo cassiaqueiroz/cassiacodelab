@@ -97,12 +97,12 @@ body {
 
 
 p {
-  font-size: 0.875rem;
+  font-size: 0.925rem;
 }
 
 @media (max-width: 768px) {
   p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -862,7 +862,7 @@ section,
   }
 
   .hero p {
-    font-size: 0.875rem;
+    font-size: 0.925rem;
   }
 
   .hero .col-lg-8 {
@@ -882,7 +882,7 @@ section,
   }
 
   .hero p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     margin-bottom: 2rem;
   }
 
@@ -899,7 +899,7 @@ section,
   }
 
   .hero p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 
   .hero .col-lg-8 {
@@ -1183,7 +1183,7 @@ section,
 }
 
 .about-2 .content p {
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   line-height: 1.8;
   color: var(--default-color);
   margin-bottom: 1.5rem;
@@ -1251,7 +1251,7 @@ section,
   }
 
   .about-2 .content p {
-    font-size: 0.8rem;
+    font-size: 0.925rem;
   }
 
   .about-2 .row {
@@ -1292,7 +1292,7 @@ section,
   }
 
   .about-2 .content p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     text-align: center;
   }
 
@@ -1312,7 +1312,7 @@ section,
   }
 
   .about-2 .content p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 
   .about-2 .profile-img img {
@@ -1702,7 +1702,7 @@ section,
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   white-space: nowrap;
 }
 
@@ -1723,7 +1723,7 @@ section,
   }
 
   .contact .info-item p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 
