@@ -46,6 +46,10 @@
   /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ac8de4;
   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+
+
+  /* Smooth scroll */
+  scroll-behavior: smooth;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -69,10 +73,6 @@
 }
 
 /* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
-}
-
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -85,8 +85,9 @@ body {
   position: relative;
   background-attachment: fixed;
   text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-  /* Sombra que dá o efeito de flutuação */
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @media (max-width: 820px) {
@@ -126,11 +127,16 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: var(--default-color);
-  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  opacity: 0.95;
   transition: all 0.5s;
   z-index: 997;
+  padding: 15px 0;
+  top: 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  height: 4.375em;
 }
 
 .header .logo {
@@ -138,11 +144,12 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 2.5rem;
-  height: auto;
-  width: auto;
-  border-radius: 50%;
+  max-height: 48px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  width: auto;
+  height: auto;
 }
 
 .header .logo h1 {
@@ -166,7 +173,7 @@ h6 {
 /*--------------------------------------------------------------
 # Desktop Navigation 
 --------------------------------------------------------------*/
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .navmenu {
     padding: 0;
     display: flex;
@@ -236,7 +243,7 @@ h6 {
 /*--------------------------------------------------------------
 # Mobile Navigation
 --------------------------------------------------------------*/
-@media (max-width: 1279px) {
+@media (max-width: 1023px) {
   .navmenu {
     padding: 0;
     z-index: 9997;
@@ -343,22 +350,32 @@ h6 {
   }
 }
 
-/* Responsive adjustments for different mobile screen sizes */
-@media (max-width: 480px) {
+/* Responsive adjustments for different screen sizes */
+/* Large tablets (landscape) */
+@media (min-width: 769px) and (max-width: 1023px) {
   .mobile-nav-active .navmenu ul {
-    inset: 55px 20px 20px 20px !important;
+    inset: 55px 80px 20px 80px !important;
   }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+/* Small tablets (portrait) and large phones (landscape) */
+@media (min-width: 641px) and (max-width: 768px) {
   .mobile-nav-active .navmenu ul {
     inset: 55px 60px 20px 60px !important;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1279px) {
+/* Medium phones (portrait) */
+@media (min-width: 481px) and (max-width: 640px) {
   .mobile-nav-active .navmenu ul {
-    inset: 55px 100px 20px 100px !important;
+    inset: 55px 40px 20px 40px !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .mobile-nav-active .navmenu ul {
+    inset: 55px 20px 20px 20px !important;
   }
 }
 
@@ -541,7 +558,7 @@ h6 {
 }
 
 /* Ajuste para telas menores */
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
   .language-switcher {
     position: static;
     /* Remove a posição absoluta */
@@ -573,80 +590,81 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 40px 0;
+  background-color: transparent;
+  padding: 2rem;
   position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.footer p {
-  font-size: 0.8rem;
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  .contact .info-item p {
-    font-size: 0.7rem;
-  }
-}
-
-.footer .copyright p {
-  margin-bottom: 0;
-  font-size: 0.8rem;
-}
-
-@media (max-width: 768px) {
-  .footer .copyright p {
-    font-size: 0.7rem;
-  }
+.footer .footer-top {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
 .footer .social-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  gap: 13px;
 }
 
 .footer .social-links a {
-  font-size: 1rem;
-  display: inline-block;
-  color: var(--default-color);
-  line-height: 1;
-  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  color: color-mix(in srgb, var(--default-color), transparent 2%);
+  margin: 0;
   transition: 0.3s;
-  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  /* Sombra que dá o efeito de flutuação */
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
   .footer .social-links a {
-    font-size: 0.875rem;
+    font-size: 0.925rem;
   }
 }
 
 .footer .social-links a:hover {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-  /* Cor dos ícones ao passar o mouse */
+  transform: translateY(-2px);
 }
 
-.footer .social-links a span {
-  display: inline-block;
-  width: 2rem;
-  /* Ajuste a largura dos ícones conforme necessário */
-  height: 2rem;
-  /* Ajuste a altura dos ícones conforme necessário */
-  line-height: 2rem;
-  /* Centraliza o ícone verticalmente */
-  text-align: center;
-  /* Centraliza o ícone horizontalmente */
-  font-size: 0.875rem;
-  /* Ajuste o tamanho do texto dos ícones conforme necessário */
+.footer hr {
+  margin: 1.5rem auto;
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(162, 133, 221, 0.3), transparent);
+  width: 60%;
 }
 
-.footer .credits {
-  margin-top: 10px;
-  font-size: 12px;
-  text-align: center;
+@media (max-width: 768px) {
+  .footer hr {
+    width: 80%;
+    margin: 1.2rem auto;
+  }
 }
+
+.footer .footer-bottom {
+  margin-top: 1.3rem;
+}
+
+.footer .copyright {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -731,7 +749,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 15px;
 }
@@ -883,7 +901,7 @@ section,
 
   .hero p {
     font-size: 0.875rem;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
 
   .hero .col-lg-8 {
@@ -1102,7 +1120,7 @@ section,
   -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid rgba(162, 133, 221, 0.15);
   border-bottom: 1px solid rgba(162, 133, 221, 0.15);
-  box-shadow: 
+  box-shadow:
     0 2px 20px rgba(162, 133, 221, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   z-index: 1;
@@ -1159,9 +1177,9 @@ section,
   padding-left: 2rem;
 }
 
-.about-2 .content h3 {
+.about-2 .content h2 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   background: linear-gradient(135deg, #2d3748 0%, #4a5568 50%, #2d3748 100%);
   -webkit-background-clip: text;
@@ -1171,7 +1189,7 @@ section,
   position: relative;
 }
 
-.about-2 .content h3::after {
+.about-2 .content h2::after {
   content: '';
   position: absolute;
   bottom: -8px;
@@ -1334,7 +1352,7 @@ section,
 }
 
 .portfolio .section-title h2 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--heading-color);
   margin-bottom: 1rem;
@@ -1370,7 +1388,7 @@ section,
   background: rgba(255, 255, 255, 0.03);
   border-top: 1px solid rgba(162, 133, 221, 0.15);
   border-bottom: 1px solid rgba(162, 133, 221, 0.15);
-  box-shadow: 
+  box-shadow:
     0 2px 20px rgba(162, 133, 221, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   z-index: -1;
@@ -1395,7 +1413,7 @@ section,
   background: rgba(253, 234, 253, 0.15);
   border-top-color: rgba(162, 133, 221, 0.25);
   border-bottom-color: rgba(162, 133, 221, 0.25);
-  box-shadow: 
+  box-shadow:
     0 4px 30px rgba(162, 133, 221, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
@@ -1440,19 +1458,21 @@ section,
 
 /* Portfolio grid improvements */
 .portfolio .row {
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
 }
 
 .portfolio .portfolio-item {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
   position: relative;
   overflow: hidden;
   border-radius: 2px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   flex: 1;
   margin: 0 auto;
+
   backdrop-filter: blur(10px);
 }
 
@@ -1513,7 +1533,7 @@ section,
 
 .portfolio .portfolio-info .details-link {
   position: absolute;
-  top: 1rem;
+  top: 0.4rem;
   right: 1rem;
   width: 40px;
   height: 40px;
@@ -1694,7 +1714,7 @@ section,
 
 .contact .info-item h3 {
   padding: 0;
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -1772,10 +1792,10 @@ section,
 
 /* Social Icons - sci-icon pattern for HTML implementation */
 .sci-icon {
-  font-size: 1rem;
+  font-size: 1.2rem;
   display: inline-block;
   color: var(--default-color);
-  line-height: 1;
+  line-height: 2;
   margin: 0 10px;
   transition: 0.3s;
   text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
@@ -1793,18 +1813,7 @@ section,
   height: 2rem;
   line-height: 2rem;
   text-align: center;
-  font-size: 0.875rem;
-}
-
-@media (max-width: 768px) {
-  .sci-icon {
-    font-size: 0.875rem;
-    margin: 0 8px;
-  }
-
-  .sci-icon span {
-    font-size: 0.75rem;
-  }
+  font-size: 1.2rem;
 }
 
 /* Mobile backdrop-filter fallbacks for better compatibility */
