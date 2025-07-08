@@ -645,7 +645,7 @@ h6 {
   margin: 1.5rem auto;
   border: none;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(162, 133, 221, 0.3), transparent);
+  background: linear-gradient(to right, transparent, rgba(162, 133, 221, 0.7), transparent);
   width: 60%;
 }
 
