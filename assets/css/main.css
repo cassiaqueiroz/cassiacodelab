@@ -203,7 +203,6 @@ h6 {
     align-items: center;
     justify-content: space-between;
     font-size: 16px;
-    font-weight: 400;
     font-family: var(--nav-font);
     white-space: nowrap;
     color: #181818;
@@ -1448,7 +1447,6 @@ section,
   font-weight: 500;
   color: var(--default-color);
   margin: 0;
-  letter-spacing: 0.5px;
   position: relative;
   z-index: 2;
   background: linear-gradient(135deg, #2d3748 0%, #4a5568 50%, #2d3748 100%);
@@ -1519,7 +1517,6 @@ section,
   font-weight: 500;
   color: var(--default-color);
   margin: 0 0 0.5rem 0;
-  letter-spacing: 0.3px;
   line-height: 1.3;
 }
 
