@@ -1466,14 +1466,13 @@ section,
 }
 
 .portfolio .portfolio-item {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
   position: relative;
   overflow: hidden;
   border-radius: 2px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   flex: 1;
   margin: 0 auto;
-
+  padding: 0;
   backdrop-filter: blur(10px);
 }
 
@@ -1493,9 +1492,9 @@ section,
 
 /* Portfolio info styling */
 .portfolio .portfolio-info {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.6);
   /* Fallback for browsers that don't support backdrop-filter */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 0 0 15px 15px;
